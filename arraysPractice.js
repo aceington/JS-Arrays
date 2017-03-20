@@ -105,8 +105,10 @@ function finder(callback) {
 var str = 'this is my sentence';
 //Write a function called reverse that takes a given str as it's only argument and returns that string after it's been reversed
 
-  //Code Here
-
+function reverse(str) {
+  var newStr = str.split('').reverse().join('');
+  return newStr;
+}
 
 //Next Problem
 
@@ -126,11 +128,24 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
   In both the removeItem function and the addItem function, you will also need to check for valid aurguments. Specrunner will try to call your functions without passing in valid aurguments. When this happens, you will need to respond by returning an empty array.
 */
+function removeItem(myGroceryList, item) {
+  for (var i = 0; i < myGroceryList.length; i++) {
+    if (myGroceryList[i] === item) {
+      myGroceryList.splice(myGroceryList.indexOf(myGroceryList[i]), 1);
+    }
+  }
+  return myGroceryList;
+}
 
-  //Code Here
+function addItem (myGroceryList, food) {
+  if (myGroceryList.indexOf(food) === -1) {
+    myGroceryList.push(food);
+  }
+  return myGroceryList;
+}
 
-//removeItem(myGroceryList, 'chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
-//addItem(myGroceryList, 'Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
+removeItem(myGroceryList, 'chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
+addItem(myGroceryList, 'Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
 
 
 
@@ -140,8 +155,13 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 
 //Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
 
-  //Code Here
-
+var arr = [];
+function maker() {
+  for(var i = 1; i <= 215; i++) {
+    arr.push(i);
+  }
+  return arr;
+}
 
 
 //Next Problem
@@ -151,7 +171,7 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 //Write a function called addTen that is given 'numbers' as it's only argument and returns a new
 //array after adding ten to each item in numbers. *Verify your answer is correct. --> [15, 19, 26, 29, 35, 44, 58]
 
-  //Code Here
+
 
 
 
