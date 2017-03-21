@@ -172,6 +172,12 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 //array after adding ten to each item in numbers. *Verify your answer is correct. --> [15, 19, 26, 29, 35, 44, 58]
 
 
+function addTen(numbers) {
+  for (var i = 0; i < numbers.length; i++) {
+   numbers[i] = (numbers[i] * 1) + 10;
+  }
+  return numbers;
+}
 
 
 
@@ -192,7 +198,15 @@ for(var i = 0; i < num2; i++){
 //Above is some code that adds a random number of values to both arr1 and arr2.
 //Write a function called 'longer' that is given arr1 and arr2 as it's only arguments. Return the array which is longest.
 
-  //Code Here
+function longer(arr1, arr2) {
+  if (arr1.length > arr2.length) {
+    return arr1;
+  }
+  else {
+    return arr2;
+  }
+}
+
 
 
 /*As a continuation of the previous problem, write another function called 'both'.
@@ -201,7 +215,17 @@ for(var i = 0; i < num2; i++){
   Example: var arr1 = [1,2,3,4]; var arr2 = [2,4,5,6]; newArray // [2,4]
 */
 
-  //Code Here
+var newArr = [];
+function both(arr1, arr2) {
+  for (var i = 0; i < arr1.length; i++) {
+    for (var j = 0; j < arr2.length; j++) {
+      if (arr1[i] === arr2[j]) {
+        newArr.push(j);
+      }
+    }
+  }
+  return newArr;
+}
 
 
 
@@ -241,12 +265,12 @@ var colt = {
 array with those four objects. After that console.log the length of the Array and make
 sure that it's equal to 4. */
 
-  //Code Here
+devMountainEmployees.push(tyler, cahlan, ryan, colt);
 
 /*Now let's say Cahlan has a mental breakdown and has to take a leave of absence to 'find himself'.
 Loop through your devMountainEmployees until you find cahlan, then remove him from the array.*/
 
-  //Code Here
+
 
 
 
@@ -259,7 +283,7 @@ of Data is to have an Array full of objects. */
 
 //Create an empty array called users.
 
-  //Code Here
+//Code Here
 
 /*Now add three user objects to your users array. Each user object should contain the
 following properties. name, email, password, username.*/
